@@ -3,7 +3,7 @@
 var socket;
 
 function setup() {
-    createCanvas(1200, 800);
+    createCanvas(800, 800);
 
     background(0);
 
@@ -34,12 +34,11 @@ function mouseDragged() {
 }
 
 function sendMouse(xpos, ypos) {
-    console.log("sendmouse: " + xpos + " " + ypos);
 
     var data = {
         x: xpos,
         y: ypos
-    }
+    };
 
     socket.emit('mouse', data);
 }
